@@ -13,8 +13,6 @@ const Instrument = (props) => {
         const s = [...steps];
         s[id] = !s[id];
         setSteps(s);
-        createLoop();
-        console.log(Transport);
     }
 
     const createLoop = () => {
@@ -35,7 +33,7 @@ const Instrument = (props) => {
 
     useEffect(() => {
         createLoop();
-    }, []);
+    }, [steps]);
 
 
     return (

@@ -16,12 +16,8 @@ const Step = (props) => {
         border: '2px solid black'
     }
 
-    const handleClick = () => {
-        props.onClick(props.id);
-    }
-
     return (
-        <div style={stepStyle} onClick={() => handleClick()}>
+        <div style={stepStyle} onClick={() => props.onClick(props.id)}>
         </div>
     )
 }
